@@ -9,9 +9,9 @@
     "globalTimeout": 0,
     "grep": {},
     "grepInvert": null,
-    "maxFailures": 0,
+    "maxFailures": 1,
     "metadata": {
-      "actualWorkers": 4
+      "actualWorkers": 1
     },
     "preserveOutput": "always",
     "projects": [
@@ -20,7 +20,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 4
+          "actualWorkers": 1
         },
         "id": "chromium",
         "name": "chromium",
@@ -29,14 +29,14 @@
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
         ],
-        "timeout": 30000
+        "timeout": 0
       },
       {
         "outputDir": "C:/Users/ashwi/Desktop/playwright/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 4
+          "actualWorkers": 1
         },
         "id": "firefox",
         "name": "firefox",
@@ -45,14 +45,14 @@
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
         ],
-        "timeout": 30000
+        "timeout": 0
       },
       {
         "outputDir": "C:/Users/ashwi/Desktop/playwright/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 4
+          "actualWorkers": 1
         },
         "id": "webkit",
         "name": "webkit",
@@ -61,7 +61,7 @@
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
         ],
-        "timeout": 30000
+        "timeout": 0
       }
     ],
     "quiet": false,
@@ -88,23 +88,23 @@
     "updateSnapshots": "missing",
     "updateSourceMethod": "patch",
     "version": "1.59.1",
-    "workers": 8,
+    "workers": 1,
     "webServer": null
   },
   "suites": [
     {
-      "title": "tests\\APITesting.spec.js",
-      "file": "tests/APITesting.spec.js",
+      "title": "tests\\alert.spec.js",
+      "file": "tests/alert.spec.js",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "GET : Fetch all posts",
+          "title": "Alert With prompt",
           "ok": true,
           "tags": [],
           "tests": [
             {
-              "timeout": 30000,
+              "timeout": 0,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "chromium",
@@ -114,16 +114,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 429,
+                  "duration": 15113,
                   "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Total post fetched : \u001b[33m100\u001b[39m\n"
-                    }
-                  ],
+                  "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-04-22T16:29:54.480Z",
+                  "startTime": "2026-04-24T08:57:10.455Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -131,133 +127,19 @@
               "status": "expected"
             }
           ],
-          "id": "b67b6f532a7797334d88-3b33492e62c2381cba2d",
-          "file": "tests/APITesting.spec.js",
-          "line": 28,
-          "column": 1
-        },
-        {
-          "title": "POST : Create a new post",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 663,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Created Post ID :  \u001b[33m101\u001b[39m\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-04-22T16:29:54.472Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "b67b6f532a7797334d88-67b52549b4796ab6b9f2",
-          "file": "tests/APITesting.spec.js",
-          "line": 40,
-          "column": 1
-        },
-        {
-          "title": "PUT : Update a post with new data",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "parallelIndex": 2,
-                  "status": "passed",
-                  "duration": 1105,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Upadted Post Title: This is API Automation\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-04-22T16:29:54.483Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "b67b6f532a7797334d88-9a0775870cf509e05abe",
-          "file": "tests/APITesting.spec.js",
-          "line": 59,
-          "column": 1
-        },
-        {
-          "title": "DELETE : Delete a post",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 3,
-                  "parallelIndex": 3,
-                  "status": "passed",
-                  "duration": 612,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Post deleted successfully\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-04-22T16:29:54.469Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "b67b6f532a7797334d88-159052c9447da1abae43",
-          "file": "tests/APITesting.spec.js",
-          "line": 78,
-          "column": 1
+          "id": "eeced8f2e232ebe30bc6-c21395a94e9b360ad333",
+          "file": "tests/alert.spec.js",
+          "line": 46,
+          "column": 6
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-04-22T16:29:53.361Z",
-    "duration": 2310.536,
-    "expected": 4,
+    "startTime": "2026-04-24T08:57:09.133Z",
+    "duration": 17478.560999999998,
+    "expected": 1,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
