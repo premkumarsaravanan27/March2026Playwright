@@ -1,0 +1,8 @@
+{
+  "default": {
+    "require": ["cucumber/step-definitions/*.js"],
+    "require-module": ["ts-node/register"],
+    "format": ["progress"],
+    "format-options": "{\"snippetInterface\": \"async-await\"}"
+  }
+}
