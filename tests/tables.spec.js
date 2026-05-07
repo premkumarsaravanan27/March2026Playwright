@@ -6,6 +6,7 @@ test("handling table", async ({ page }) => {
 
     const table = page.locator('#productTable');
 
+
     //No of columns and rows
     const columns = table.locator('thead tr th');
     console.log('Number of columns:', await columns.count());
@@ -21,13 +22,10 @@ test("handling table", async ({ page }) => {
         hasText: 'Smartwatch'
     });
 
-    await matchedRow.first().locator("input[type='checkbox']").check();
+    await matchedRow.locator("input[type='checkbox']").check();
     await page.waitForTimeout(5000)
 
-   // ✅ Method 2 (Reusable function)
-    await selectProduct(rows, page, "Smartphone");
-    await selectProduct(rows, page, "Laptop");
-    await selectProduct(rows, page, "Tablet");
+  
 
 
 
@@ -48,6 +46,11 @@ for (let i = 0; i < await rows.count(); i++) {
 }
 // ✅ reusable function
 
+ // ✅ Method 2 (Reusable function)
+    await selectProduct(rows, page, "Smartphone");
+    await selectProduct(rows, page, "Laptop");
+    await selectProduct(rows, page, "Wireless Earbuds");
+
 async function selectProduct(rows, page, name) {
 
     const matchedRow = rows.filter({
@@ -55,13 +58,14 @@ async function selectProduct(rows, page, name) {
     });
 
     if (await matchedRow.count() > 0) {
-        await matchedRow.first().locator("input[type='checkbox']").check();
+        await matchedRow.locator("input[type='checkbox']").check();
     } else {
         console.log(`Product not found: ${name}`);
-    
+    }
 
 
-}}})
+
+}})
 
 
 

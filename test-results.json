@@ -9,9 +9,9 @@
     "globalTimeout": 0,
     "grep": {},
     "grepInvert": null,
-    "maxFailures": 1,
+    "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 3
     },
     "preserveOutput": "always",
     "projects": [
@@ -20,7 +20,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 3
         },
         "id": "chromium",
         "name": "chromium",
@@ -29,14 +29,14 @@
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
         ],
-        "timeout": 0
+        "timeout": 30000
       },
       {
         "outputDir": "C:/Users/ashwi/Desktop/playwright/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 3
         },
         "id": "firefox",
         "name": "firefox",
@@ -45,14 +45,14 @@
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
         ],
-        "timeout": 0
+        "timeout": 30000
       },
       {
         "outputDir": "C:/Users/ashwi/Desktop/playwright/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 3
         },
         "id": "webkit",
         "name": "webkit",
@@ -61,7 +61,7 @@
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
         ],
-        "timeout": 0
+        "timeout": 30000
       }
     ],
     "quiet": false,
@@ -88,23 +88,23 @@
     "updateSnapshots": "missing",
     "updateSourceMethod": "patch",
     "version": "1.59.1",
-    "workers": 1,
+    "workers": 8,
     "webServer": null
   },
   "suites": [
     {
-      "title": "tests\\alert.spec.js",
-      "file": "tests/alert.spec.js",
+      "title": "tests\\reporter.spec.js",
+      "file": "tests/reporter.spec.js",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Alert With prompt",
+          "title": "Test 1",
           "ok": true,
           "tags": [],
           "tests": [
             {
-              "timeout": 0,
+              "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "chromium",
@@ -114,12 +114,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 15113,
+                  "duration": 2691,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-04-24T08:57:10.455Z",
+                  "startTime": "2026-05-02T06:32:02.256Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -127,19 +127,87 @@
               "status": "expected"
             }
           ],
-          "id": "eeced8f2e232ebe30bc6-c21395a94e9b360ad333",
-          "file": "tests/alert.spec.js",
-          "line": 46,
-          "column": 6
+          "id": "45b84243be3c6e600e8d-640a1dbe42c40be42384",
+          "file": "tests/reporter.spec.js",
+          "line": 3,
+          "column": 5
+        },
+        {
+          "title": "Test 2",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 3054,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-02T06:32:02.255Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "45b84243be3c6e600e8d-fbefec3af875a5790fbb",
+          "file": "tests/reporter.spec.js",
+          "line": 9,
+          "column": 5
+        },
+        {
+          "title": "Test 3",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 4360,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-02T06:32:02.270Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "45b84243be3c6e600e8d-8096fbda6bfc477c4fb4",
+          "file": "tests/reporter.spec.js",
+          "line": 14,
+          "column": 5
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-04-24T08:57:09.133Z",
-    "duration": 17478.560999999998,
-    "expected": 1,
+    "startTime": "2026-05-02T06:32:01.125Z",
+    "duration": 7288.923,
+    "expected": 3,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

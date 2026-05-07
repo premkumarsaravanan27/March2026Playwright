@@ -10,10 +10,10 @@ test('frames', async ({page})=>{
     
 
     //approach 1 using name of url
-    //const frame1=await page.frame({url:'https://ui.vision/demo/webtest/frames/frame_1.html'})
-    //await frame1.fill('[type="text"]','Subash');
+    const frame1=await page.frame({url:'https://ui.vision/demo/webtest/frames/frame_1.html'})
+    await frame1.fill('[type="text"]','Subash');
 
-    //await page.waitForTimeout(2000);
+    await page.waitForTimeout(2000);
      
     //approach 2-using frame locator
     const inputbox = page.frameLocator("frame[src='frame_1.html']")

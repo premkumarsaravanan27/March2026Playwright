@@ -14,10 +14,12 @@ test('Drag and Drop - testautomationpractice', async ({ page }) => {
     await page.mouse.up();
 
     //approach 2
-    const source1=await page.locator('#draggable');
-    const target1=await page.locator('#droppable');
+    // const source1=await page.locator('#draggable');
+    // const target1=await page.locator('#droppable');
 
-    await source1.dragTo(target1);
+
+    //await page.locator('#draggable').dragTo(page.locator('#droppable'));
+    // await source1.dragTo(target1);
 
     
   await page.waitForTimeout(5000);

@@ -2,9 +2,9 @@ import { test, expect } from '@playwright/test';
 
 test('mouse hover on Fresh', async ({ page }) => {
 
-    await page.goto('https://www.amazon.in/');
+    await page.goto('https://testautomationpractice.blogspot.com/');
 
-   const fresh = page.locator('#nav-link-groceries');
+   const fresh = page.locator('button.dropbtn');
     await fresh.hover();
     // Example validation (optional)
     await expect(fresh).toBeVisible();

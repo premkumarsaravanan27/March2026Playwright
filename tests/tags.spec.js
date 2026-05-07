@@ -1,6 +1,6 @@
 import {test,expect} from '@playwright/test'
 
-test('Test 1 @smoke',async({page}) =>{
+test('Test 1 @sesha',async({page}) =>{
 
     await page.goto('https://www.amazon.in/');
     await expect(page).toHaveURL('https://www.amazon.in/')

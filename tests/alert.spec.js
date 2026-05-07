@@ -1,11 +1,11 @@
-import {test,expect} from '@playwright/test';
+ import {test,expect} from '@playwright/test';
 
 
 // test('Alert With Ok',async({page})=>{
 //     await page.goto('https://testautomationpractice.blogspot.com/') 
     
 // //dialog window handler -----enabling alert handling
-//  await page.click("#alertBtn"); //click on the button to trigger the alert
+//  await page.click("//button[@id='alertBtn']"); //click on the button to trigger the alert
 
 // page.on('dialog',async dialog=>{ 
 //     expect(dialog.type()).toBe('alert');
@@ -18,7 +18,7 @@ import {test,expect} from '@playwright/test';
 // })
 
 
-//  /*await page.click("//button[@id='alertBtn']"); //click on the button to trigger the alert
+  
 //  await page.waitForTimeout(5000); //pause for 5 seconds to see the result */
 
 //  test('Alert With Ok and cancel',async({page})=>{
@@ -39,7 +39,7 @@ import {test,expect} from '@playwright/test';
 
 // await page.waitForTimeout(5000); //pause for 5 seconds to see the result 
 
-// await page.click("//button[@id='confirmBtn']"); //click on the button to trigger the alert
+
 
 
 
@@ -51,6 +51,7 @@ import {test,expect} from '@playwright/test';
     expect(dialog.type()).toContain('prompt');
     expect(dialog.message()).toContain('Please enter your name:');
     expect(dialog.defaultValue()).toBe('Harry Potter');
+    
      await dialog.accept('Harry Potter'); //click on ok button
     
 
@@ -67,5 +68,5 @@ import {test,expect} from '@playwright/test';
  await page.waitForTimeout(5000); //pause for 5 seconds to see the result
 
 // })
- // })
  })
+  

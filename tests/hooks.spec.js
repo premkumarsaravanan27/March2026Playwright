@@ -7,7 +7,7 @@ test.describe('Demoblaze Hooks Example', () => {
 
   // 🔹 Runs once before all tests
   test.beforeAll(async () => {
-    browser = await chromium.launch({ headless: false });
+    browser = await chromium.launch({ headless: true });
     const context = await browser.newContext();
     page = await context.newPage();
 
