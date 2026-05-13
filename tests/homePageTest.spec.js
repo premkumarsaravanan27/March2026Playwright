@@ -7,5 +7,6 @@ test.describe('DemoBlaze home page tests', () => {
 
     await homePage.goto();
     await homePage.verifyHomePage();
+    await homePage.addProducts('Samsung galaxy s6');
   });
 });

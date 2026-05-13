@@ -11,10 +11,10 @@ test('handle input box',async({page})=>{
     await expect(page.locator('//input[@id="name"]')).toBeEditable();
     await expect(page.locator('//input[@id="name"]')).toBeEnabled();
 
-    await page.fill('//input[@id="name"]','Ashwin');
-    // await page.locator('//input[@id="name"]').fill('Ashwin');
+    //await page.fill('//input[@id="name"]','Ashwin');
+    await page.locator('input#name').fill('Ashwin');
 
-    await page.locator('//input[@id="email"]').fill('hari@gmail.com');
+    await page.locator('input#email').fill('hari@gmail.com');
 
     await page.waitForTimeout(5000); //pause for 5 seconds to see the result
 

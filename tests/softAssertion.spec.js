@@ -10,6 +10,6 @@ test('Assertions in Playwright',async({page})=>{
     await expect.soft (page).toHaveURL('https://demo.nopcommerce.com/register?returnUrl=%2Felectronics');
  
     //Ensures the page has the given title. change the title to fail the test and see the result
-    await expect.soft (page).toHaveTitle('noCommerce demo store. Register');
+    await expect.soft (page).toHaveTitle('nopCommerce demo store. Register');
 
 });

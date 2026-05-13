@@ -4,13 +4,13 @@ test('Date Pickers', async ({ page }) => {
 
     await page.goto('https://testautomationpractice.blogspot.com/');
 
-     //await page.locator('input#datepicker').fill("01/25/2026");
+ // await page.locator('input#datepicker').fill("01/25/2026");
 
-     
+  //   await page.waitForTimeout(2000);
 
     // Date Picker
 
-  const year = "2004";
+  const year = "2021";
   const month = "May";
   const date = "17"
 
@@ -23,29 +23,30 @@ test('Date Pickers', async ({ page }) => {
       if (currentYear == year && currrentMonth == month) {
           break;
     }
-        // await page.locator('[title="Next"]').click(); // Next
+ //await page.locator('[title="Next"]').click(); // Next
         await page.locator('[title="Prev"]').click(); // Past
      }
 
-     await page.waitForTimeout(19000);
+     await page.waitForTimeout(5000);
 
-    const dates = await page.$$('//a[@class="ui-state-default"]');
+     const dates = await page.$$('//a[@class="ui-state-default"]');
 
-   // Date Selection using Loop
+ // Date Selection using Loop
 
-    for(const dt of dates) {
-        if(await dt.textContent() == date) {
-            await dt.click();
-            break;
-        }
-    }
+     for(const dt of dates) {
+         if(await dt.textContent() == date) {
+             await dt.click();
+             break;
+         }
+     }
 
+     await page.waitForTimeout(9000);
 
 //     // Date Selection - without loop
 
-await page.locator('//a[@class="ui-state-default"][text()="21"]').click();
+//await page.locator('//a[@class="ui-state-default"][text()="21"]').click();
 
-  await page.locator(`//a[@class="ui-state-default"][text()='${date}']`).click();
+ // await page.locator(`//a[@class="ui-state-default"][text()='${date}']`).click();
 
-     await page.waitForTimeout(2000);
+ //    await page.waitForTimeout(2000);
 });

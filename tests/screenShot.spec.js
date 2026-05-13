@@ -1,26 +1,27 @@
-/*import { test, expect } from '@playwright/test';
+// import { test, expect } from '@playwright/test';
 
-test('Full Page Screenshot', async ({ page }) => {
-  await page.goto('https://www.amazon.in/');
+// test('Full Page Screenshot', async ({ page }) => {
+//   await page.goto('https://www.amazon.in/');
 
-  await page.waitForTimeout(5000); // Wait for 5 seconds to ensure the page is fully loaded
-  await page.screenshot({
-    path: 'screenshots/fullpage.png',
-    fullPage: true
-  });
-});
-*/
-/*import { test, expect } from '@playwright/test';
+//   await page.waitForTimeout(5000); // Wait for 5 seconds to ensure the page is fully loaded
+//   await page.screenshot({
+//     path: 'screenshots/seshafullpage.png',
+//     fullPage: true
+//   });
+// });
 
-test('Visible Page Screenshot', async ({ page }) => {
-  await page.goto('https://www.amazon.in/');
+// import { test, expect } from '@playwright/test';
 
-  await page.waitForTimeout(5000); // Wait for 5 seconds to ensure the page is fully loaded
+// test('Visible Page Screenshot', async ({ page }) => {
+//   await page.goto('https://www.amazon.in/');
 
-  await page.screenshot({
-    path: 'screenshots/visible.png'
-  });
-});*/
+//   await page.waitForTimeout(5000); // Wait for 5 seconds to ensure the page is fully loaded
+
+//   await page.screenshot({
+//     path: 'screenshots/naveenvisible1.png',
+//     fullPage: true
+//   });
+// });
 
 import { test, expect } from '@playwright/test';
 
